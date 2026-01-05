@@ -1,0 +1,10 @@
+{
+    "posts": [
+        {
+            "id": 1,
+            "name": "Satheesh",
+            "email": "sat123@gmail.com",
+            "address": "Bangalore"
+        }   
+    ]
+}

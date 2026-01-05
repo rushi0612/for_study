@@ -1,0 +1,104 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+/* Make page vertical layout */
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Footer always at bottom */
+footer {
+    margin-top: auto;
+}
+
+/* HEADER (flexbox version) */
+header {
+    height: 100px;
+    background-color: blue;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;  /* logo left, menu right */
+}
+
+/* Logo */
+header .logo h1 {
+    color: white;
+}
+
+/* MENU */
+header .menu ul {
+    list-style: none;
+}
+
+header .menu ul li {
+    display: inline-block;
+    margin-left: 20px;
+    background-color: beige;
+}
+
+header .menu ul li a {
+    color: red;
+    text-decoration: none;
+    padding: 5px 10px;
+}
+
+/* SECTION */
+section {
+    flex-grow: 1;     /* stretch automatically */
+    background-color: rgb(0, 255, 0);
+    height: 600px;
+}
+
+/* FOOTER */
+footer {
+    background-color: blue;
+    height: 200px;
+    color: white;
+    padding: 20px;
+}
+
+marquee {
+    background-color: rgb(78, 78, 78);
+}
+
+
+form {
+    width: 300px;
+    margin: 20px auto;
+    font-size: 18px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+form input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #999;
+    border-radius: 5px;
+}
+
+form button {
+    background-color: blue;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: darkblue;
+}
