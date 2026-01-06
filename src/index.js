@@ -19,6 +19,7 @@ import FetchGetExample from "./apiexample/FetchGetExample";
 import FetchPostExample from "./apiexample/FetchPostExample";
 import FetchMain from "./apiexample/FetchMain";
 import FetchDeleteExample from "./apiexample/FetchDeleteExample";
+import FetchPutExample from "./apiexample/FetchPutExample";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -38,6 +39,7 @@ root.render(
     {/* <FetchGetExample /> */}
     {/* <FetchPostExample /> */}
     <FetchDeleteExample />
+    {/* <FetchPutExample /> */}
   </React.StrictMode>
 );
 

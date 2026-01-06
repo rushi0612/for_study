@@ -2,15 +2,9 @@
   "posts": [
     {
       "id": "1",
-      "name": "Satheesh",
-      "email": "sat123@gmail.com",
-      "address": "Bangalore"
-    },
-    {
-      "id": "2",
-      "name": "Ram",
-      "email": "ram@gmail.com",
-      "address": "Chennai"
+      "name": "shyam",
+      "email": "shaym@gmail.com",
+      "address": "pune"
     }
   ]
 }

@@ -34,5 +34,4 @@ function FetchGetExample()
 
 export default FetchGetExample;
 
-
 //https://gorest.co.in/

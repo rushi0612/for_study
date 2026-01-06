@@ -2,54 +2,54 @@ import { useState } from "react"
 
 function FetchPutExample() 
 {
-    const [tdata, SetTdata]=useState(undefined) 
-    function update(e){    
-        
-        const token ='d02b123bbe05ac5b0be7ddc458d9855c2463887e340c392c21d668cf65bf7274'
-         const userId = 8319067;
+    const [tdata, SetTdata]=useState(undefined)
+    const [id, setId]=useState(undefined)
+    const [name, setName]=useState(undefined)
+    const [email, setEmail]=useState(undefined) 
+    const [address, setAddress]=useState(undefined)
+    function postperson(e){    
+        e.preventDefault();
             console.log("click")
-        fetch(`https://gorest.co.in/public/v2/users/${userId}`, {
-            method: 'PUT',
+
+        fetch(`http://localhost:3001/posts/${id}`, {
+            method: 'Put',
             body: JSON.stringify(
             {
-                "name": "Viju Mali (updated)",
-                "email": "mallivijay@gmail.com",
-                "gender": "male",
-                "status": "inactive"
+                "id": id,
+                "name": name,
+                "email": email,
+                "address": address
             }
             ),
         headers:{
             "content-type":"application/json; charset=UTF-8",
-            'Authorization': `Bearer ${token}`, 
+            // 'Authorization': `Bearer ${token}`, 
             'Content-Type': 'application/json'
             
         }   
     }).then(res => res.json())
     .then((data) => {
-            console.log(data)
-            SetTdata(data)
-    }).catch(console.log)
-    e.preventDefault();
+            console.log("success", data)
+            SetTdata("Tnsert sucessfully")
+    }).catch(()=>
+        SetTdata("Tnsert failed")
+    )
     }
+
     return(
         <div>
-            <h1>Update User</h1>
-            <input type="button" value="POST DATA" onClick={update} />
+            <h1>Data of Person</h1>
+            <input type="text" onChange={(e)=>setId(e.target.value)} placeholder="Enter Id" /> <br /><br />
+            <input type="text" onChange={(e)=>setName(e.target.value)} placeholder="Enter Name" /> <br /><br />
+            <input type="text" onChange={(e)=>setEmail(e.target.value)} placeholder="Enter Email" /> <br /><br />
+            <input type="text" onChange={(e)=>setAddress(e.target.value)} placeholder="Enter Adress" /> <br /><br />
+            <input type="button" value="Update DATA" onClick={postperson} />
                     
-          {tdata && (
-        <div>
-          <p>ID: {tdata.id}</p>
-          <p>Name: {tdata.name}</p>
-          <p>Email: {tdata.email}</p>
-          <p>Status: {tdata.status}</p>
-        </div>
-            )}
+         <p>{tdata}</p>
     </div>
   );
-
 
 }
 
 export default FetchPutExample;
 
-//https://gorest.co.in/

@@ -16,7 +16,6 @@ function Header(){
                     <li className="nav-item"><Link className="nav-link , text-white" to="/gallery">  Gallery</Link> </li>
                 </ul>
                 </div>
-                
                 <div className="clerfloat"></div>
             </header>
         </div>
