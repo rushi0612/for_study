@@ -1,10 +1,28 @@
 {
-    "posts": [
-        {
-            "id": 1,
-            "name": "Satheesh",
-            "email": "sat123@gmail.com",
-            "address": "Bangalore"
-        }   
-    ]
+  "posts": [
+    {
+      "id": 1,
+      "name": "Satheesh",
+      "email": "sat123@gmail.com",
+      "address": "Bangalore"
+    },
+    {
+      "id": 2,
+      "name": "Ram",
+      "email": "ram@gmail.com",
+      "address": "Chennai"
+    },
+    {
+      "id": "3",
+      "name": "Vijay Kumar",
+      "email": "viijuu@gmail.com",
+      "address": "Nashirabad"
+    },
+    {
+      "id": "3",
+      "name": "Vijay Kumar",
+      "email": "viijuu@gmail.com",
+      "address": "Nashirabad"
+    }
+  ]
 }
