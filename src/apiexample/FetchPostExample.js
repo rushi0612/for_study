@@ -2,50 +2,49 @@ import { useState } from "react"
 
 function FetchPostExample() 
 {
-    const [tdata, SetTdata]=useState(undefined) 
+    const [tdata, SetTdata]=useState(undefined)
+    const [id, setId]=useState(undefined)
+    const [name, setName]=useState(undefined)
+    const [email, setEmail]=useState(undefined) 
+    const [address, setAddress]=useState(undefined)
     function postperson(e){    
-        
-        const token ='d02b123bbe05ac5b0be7ddc458d9855c2463887e340c392c21d668cf65bf7274'
+        e.preventDefault();
             console.log("click")
-        fetch('https://gorest.co.in/public/v2/users', {
+        fetch('http://localhost:3001/posts', {
             method: 'POST',
             body: JSON.stringify(
             {
-                "name": "Vishwas  Patil",
-                "email": "patilji@gmail.com",
-                "gender": "male",
-                "status": "active"
+                "id": id,
+                "name": name,
+                "email": email,
+                "address": address
             }
             ),
         headers:{
             "content-type":"application/json; charset=UTF-8",
-            'Authorization': `Bearer ${token}`, 
+            // 'Authorization': `Bearer ${token}`, 
             'Content-Type': 'application/json'
             
         }   
     }).then(res => res.json())
     .then((data) => {
-            console.log(data)
-            SetTdata(data)
-    }).catch(console.log)
-    e.preventDefault();
+            console.log("success", data)
+            SetTdata("Tnsert sucessfully")
+    }).catch(()=>
+        SetTdata("Tnsert failed")
+    )
     }
+
     return(
         <div>
             <h1>Data of Person</h1>
-            <form action="Onclick">
-
-            </form>
+            <input type="text" onChange={(e)=>setId(e.target.value)} placeholder="Enter Id" /> <br /><br />
+            <input type="text" onChange={(e)=>setName(e.target.value)} placeholder="Enter Name" /> <br /><br />
+            <input type="text" onChange={(e)=>setEmail(e.target.value)} placeholder="Enter Email" /> <br /><br />
+            <input type="text" onChange={(e)=>setAddress(e.target.value)} placeholder="Enter Adress" /> <br /><br />
             <input type="button" value="POST DATA" onClick={postperson} />
                     
-          {tdata && (
-        <div>
-          <p>ID: {tdata.id}</p>
-          <p>Name: {tdata.name}</p>
-          <p>Email: {tdata.email}</p>
-          <p>Status: {tdata.status}</p>
-        </div>
-            )}
+         <p>{tdata}</p>
     </div>
   );
 

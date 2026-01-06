@@ -4,26 +4,29 @@ function FetchGetExample()
 {
     const [tdata, SetTdata]=useState([]) 
     useEffect(() => {
-        fetch('https://gorest.co.in/public/v2/users').then(res => res.json()).then((data) =>{
+        fetch('http://localhost:3001/posts').then(res => res.json()).then((data) =>{
             console.log(data)
             SetTdata(data)
         }).catch(console.log)
     }, [])
+
     return(
         <div>
             <h1>user data</h1>
-            <table>
-                <tbody>
-                <tr>
+            <table width="300" border="1">
+                <tr >
                 <th>ID</th>
                 <th>Name</th>
+                <th>Email</th>
+                <th>Address</th>
                 </tr>
                 {tdata.map((p,i)=> 
                 <tr key={p.id}> 
                 <td>{p.id}</td>
                 <td>{p.name}</td> 
+                <td>{p.email}</td> 
+                <td>{p.address}</td> 
                 </tr> )}
-                </tbody>
             </table>
         </div>
     )
