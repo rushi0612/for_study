@@ -36,8 +36,8 @@ root.render(
     {/* <MountInFunc /> */}
     {/* <MountingExampleFunction /> */}
     {/* <FetchGetExample /> */}
-    <FetchPostExample />
-    {/* <FetchDeleteExample /> */}
+    {/* <FetchPostExample /> */}
+    <FetchDeleteExample />
   </React.StrictMode>
 );
 

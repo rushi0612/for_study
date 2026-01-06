@@ -3,18 +3,18 @@ import React from 'react'
 const FetchDeleteExample = () => {
 
      function deleteUser() {
-         const token = "d02b123bbe05ac5b0be7ddc458d9855c2463887e340c392c21d668cf65bf7274";
-    const userId = 8115255;
+        //  const token = "d02b123bbe05ac5b0be7ddc458d9855c2463887e340c392c21d668cf65bf7274";
+    const id = 3;
 
-        fetch(`https://gorest.co.in/public/v2/users/${userId}`, {
+        fetch(`http://localhost:3001/posts/${id}`, {
       method: "DELETE",
         headers: {
-            'Authorization': `Bearer ${token}`
+            // 'Authorization': `Bearer ${token}`
         } 
      })
       .then(res => {
       if (res.status === 204) {
-        alert(`${userId} User Deleted Successfully `);
+        alert(`${id} User Deleted Successfully `);
       }
     })
     .catch(console.log);
