@@ -36,9 +36,9 @@ root.render(
     {/* <FunctionalCycle /> */}
     {/* <MountInFunc /> */}
     {/* <MountingExampleFunction /> */}
-    {/* <FetchGetExample /> */}
+    <FetchGetExample />
     {/* <FetchPostExample /> */}
-    <FetchDeleteExample />
+    {/* <FetchDeleteExample /> */}
     {/* <FetchPutExample /> */}
   </React.StrictMode>
 );

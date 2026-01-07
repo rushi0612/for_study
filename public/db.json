@@ -1,10 +1,22 @@
 {
   "posts": [
     {
-      "id": "1",
+      "id": 1,
       "name": "shyam",
       "email": "shaym@gmail.com",
       "address": "pune"
+    },
+    {
+      "id": 2,
+      "name": "ram",
+      "email": "ram@gmail.com",
+      "address": "mumbai"
+    },
+    {
+      "id": 3,
+      "name": "mohan",
+      "email": "mohan@gmail.com",
+      "address": "nagpur"
     }
   ]
 }
