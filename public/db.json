@@ -17,6 +17,12 @@
       "name": "mohan",
       "email": "mohan@gmail.com",
       "address": "nagpur"
+    },
+    {
+      "name": "Axios put test",
+      "email": "axios@gmail.com",
+      "address": "Jalgaon",
+      "id": "4"
     }
   ]
 }

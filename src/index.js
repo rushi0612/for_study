@@ -36,10 +36,10 @@ root.render(
     {/* <FunctionalCycle /> */}
     {/* <MountInFunc /> */}
     {/* <MountingExampleFunction /> */}
-    <FetchGetExample />
+    {/* <FetchGetExample /> */}
     {/* <FetchPostExample /> */}
     {/* <FetchDeleteExample /> */}
-    {/* <FetchPutExample /> */}
+    <FetchPutExample />
   </React.StrictMode>
 );
 

@@ -1,3 +1,4 @@
+import axios from "axios"
 import { useState } from "react"
 
 function FetchPutExample() 
@@ -8,10 +9,8 @@ function FetchPutExample()
     const [email, setEmail]=useState(undefined) 
     const [address, setAddress]=useState(undefined)
     function postperson(e){    
-        e.preventDefault();
-            console.log("click")
 
-        fetch(`http://localhost:3001/posts/${id}`, {
+       /* fetch(`http://localhost:3001/posts/${id}`, {
             method: 'Put',
             body: JSON.stringify(
             {
@@ -33,7 +32,19 @@ function FetchPutExample()
             SetTdata("Tnsert sucessfully")
     }).catch(()=>
         SetTdata("Tnsert failed")
-    )
+    ) */
+
+        axios.put(`http://localhost:3001/posts/${id}`, {
+        "name": name,
+        "email": email,
+        "address": address
+    }).then((response) => {
+        SetTdata("Update sucessfully")
+        // console.log("success", response.data)
+    }).catch(()=>
+        SetTdata("Update failed")
+    );
+        e.preventDefault();
     }
 
     return(
