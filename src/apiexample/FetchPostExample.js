@@ -1,4 +1,6 @@
+import axios from "axios"
 import { useState } from "react"
+import { data } from "react-router-dom"
 
 function FetchPostExample() 
 {
@@ -8,31 +10,21 @@ function FetchPostExample()
     const [email, setEmail]=useState(undefined) 
     const [address, setAddress]=useState(undefined)
     function postperson(e){    
-        e.preventDefault();
+        
             console.log("click")
-        fetch('http://localhost:3001/posts', {
-            method: 'POST',
-            body: JSON.stringify(
-            {
-                "id": id,
-                "name": name,
-                "email": email,
-                "address": address
-            }
-            ),
-        headers:{
-            "content-type":"application/json; charset=UTF-8",
-            // 'Authorization': `Bearer ${token}`, 
-            'Content-Type': 'application/json'
-            
-        }   
-    }).then(res => res.json())
-    .then((data) => {
-            console.log("success", data)
-            SetTdata("Tnsert sucessfully")
+    axios.post('http://localhost:3001/posts', {
+        "id": id,
+        "name": name,
+        "email": email,
+        "address": address
+    }).then((response) => {
+        SetTdata("Insert sucessfully")
+        // console.log("success", response.data)
     }).catch(()=>
-        SetTdata("Tnsert failed")
-    )
+        SetTdata("Insert failed")
+    );
+        e.preventDefault();
+
     }
 
     return(
