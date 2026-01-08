@@ -1,13 +1,7 @@
 {
   "posts": [
     {
-      "id": 1,
-      "name": "shyam",
-      "email": "shaym@gmail.com",
-      "address": "pune"
-    },
-    {
-      "id": 2,
+      "id": "2",
       "name": "ram",
       "email": "ram@gmail.com",
       "address": "mumbai"
@@ -17,12 +11,6 @@
       "name": "mohan",
       "email": "mohan@gmail.com",
       "address": "nagpur"
-    },
-    {
-      "name": "Axios put test",
-      "email": "axios@gmail.com",
-      "address": "Jalgaon",
-      "id": "4"
     }
   ]
 }

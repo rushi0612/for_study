@@ -38,8 +38,8 @@ root.render(
     {/* <MountingExampleFunction /> */}
     {/* <FetchGetExample /> */}
     {/* <FetchPostExample /> */}
-    {/* <FetchDeleteExample /> */}
-    <FetchPutExample />
+    <FetchDeleteExample />
+    {/* <FetchPutExample /> */}
   </React.StrictMode>
 );
 
