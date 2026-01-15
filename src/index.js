@@ -25,7 +25,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     {/* <Main /> */}
-    {/* <App /> */}
+    <App />
     {/* <Addition /> */}
     {/* <Swap /> */}
     {/* <Addition /> */}
@@ -38,7 +38,7 @@ root.render(
     {/* <MountingExampleFunction /> */}
     {/* <FetchGetExample /> */}
     {/* <FetchPostExample /> */}
-    <FetchDeleteExample />
+    {/* <FetchDeleteExample /> */}
     {/* <FetchPutExample /> */}
   </React.StrictMode>
 );

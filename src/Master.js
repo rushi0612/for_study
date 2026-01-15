@@ -41,7 +41,7 @@ function Master() {
                         </div>
                         <Link to="./Contact" className="nav-item nav-link">Contact</Link>
                     </div>
-                    <Link to="" className="btn btn-primary px-3 d-none d-lg-flex">Add Property</Link>
+                    <Link to="./Login" className="btn btn-primary px-3 d-none d-lg-flex">Login</Link>
                 </div>
             </nav>
         </div>

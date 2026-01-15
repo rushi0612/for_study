@@ -14,6 +14,7 @@ import UserMaster from "./usermodule/UserMaster";
 import Profile from "./usermodule/Profile";
 import Orders from "./usermodule/Order";
 import History from "./usermodule/History";
+import Login from "./Login";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route path="/" element={<Master />} >
         <Route index element= {<Main/>} />
         <Route path="/about" element= {<About />} />
+        <Route path="/Login" element= {<Login />} />
         <Route path="/Services" element= {<Services />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/gallery" element={<Gallery />} />
